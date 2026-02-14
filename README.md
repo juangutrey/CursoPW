@@ -1,2 +1,3 @@
 # CursoPW
 Repositorio para las tareas y ejercicios de Programación Web 2026
+Alumno: Juan Gutierrez Reyes
