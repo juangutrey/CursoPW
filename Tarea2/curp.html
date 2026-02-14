@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Datos para CURP</h2>
+
+<label>Nombre:</label>
+<input type="text" id="nombre"><br><br>
+
+<label>Apellido paterno:</label>
+<input type="text" id="paterno"><br><br>
+
+<label>Apellido materno:</label>
+<input type="text" id="materno"><br><br>
+
+<label>Fecha nacimiento:</label>
+<input type="date" id="fecha"><br><br>
+
+<label>Sexo:</label>
+<input type="text" id="sexo"><br><br>
+
+<label>Estado:</label>
+<input type="text" id="estado"><br><br>
+
+<button onclick="crearJSON()">Crear JSON</button>
+
+<script>
+function crearJSON() {
+    var json = {
+        nombre: document.getElementById("nombre").value,
+        paterno: document.getElementById("paterno").value,
+        materno: document.getElementById("materno").value,
+        fecha: document.getElementById("fecha").value,
+        sexo: document.getElementById("sexo").value,
+        estado: document.getElementById("estado").value
+    };
+
+    console.log(json);
+}
+</script>
+</body>
+
+
+</html>

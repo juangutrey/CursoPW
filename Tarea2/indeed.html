@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Indeed - Programador Junior</title>
+</head>
+<body>
+
+<h2>Preguntas entrevista Programador Junior - Indeed</h2>
+
+<label>¿Qué lenguajes de programación conoces?</label><br>
+<input type="text" id="p1"><br><br>
+
+<label>¿Has trabajado en equipo en algún proyecto de programación?</label><br>
+<input type="text" id="p2"><br><br>
+
+<label>¿Cómo manejas la resolución de problemas?</label><br>
+<input type="text" id="p3"><br><br>
+
+<label>¿Cómo te mantienes actualizado en nuevas tecnologías?</label><br>
+<input type="text" id="p4"><br><br>
+
+<label>¿Tienes experiencia con pruebas unitarias?</label><br>
+<input type="text" id="p5"><br><br>
+
+<label>¿Qué herramienta usas para control de versiones?</label><br>
+<input type="text" id="p6"><br><br>
+
+<label>¿Cómo manejas los errores en tu código?</label><br>
+<input type="text" id="p7"><br><br>
+
+<label>¿En qué proyecto te has sentido más orgulloso?</label><br>
+<input type="text" id="p8"><br><br>
+
+<label>¿Qué valoras más en un equipo de trabajo?</label><br>
+<input type="text" id="p9"><br><br>
+
+<label>¿Cómo manejas el estrés o la presión?</label><br>
+<input type="text" id="p10"><br><br>
+
+<button onclick="crearJSON()">Enviar</button>
+
+<script>
+function crearJSON() {
+    var json = {
+        lenguajes: document.getElementById("p1").value,
+        trabajoEquipo: document.getElementById("p2").value,
+        resolucionProblemas: document.getElementById("p3").value,
+        actualizacionTecnologica: document.getElementById("p4").value,
+        pruebasUnitarias: document.getElementById("p5").value,
+        controlVersiones: document.getElementById("p6").value,
+        manejoErrores: document.getElementById("p7").value,
+        proyectoOrgullo: document.getElementById("p8").value,
+        trabajoEquipoValor: document.getElementById("p9").value,
+        manejoEstres: document.getElementById("p10").value
+    };
+
+    console.log(json);
+}
+</script>
+
+</body>
+</html>

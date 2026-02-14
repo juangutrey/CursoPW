@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direccion</title>
+</head>
+<body>
+
+<h2>Formulario Direccion</h2>
+
+<label>Calle y numero:</label>
+<input type="text" id="calle"><br><br>
+
+<label>Colonia:</label>
+<input type="text" id="colonia"><br><br>
+
+<label>Codigo postal:</label>
+<input type="text" id="cp"><br><br>
+
+<label>Estado:</label>
+<input type="text" id="estado"><br><br>
+
+<button onclick="crearDireccion()">Crear JSON</button>
+
+<script>
+function crearDireccion() {
+    var direccion = {
+        calle: document.getElementById("calle").value,
+        colonia: document.getElementById("colonia").value,
+        cp: document.getElementById("cp").value,
+        estado: document.getElementById("estado").value
+    };
+
+    console.log(direccion);
+}
+</script>
+</html>

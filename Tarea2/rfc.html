@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFC</title>    
+</head>
+
+<body>
+<H2> Generacion de RFC</H2>    
+<label>Nombre:</label>
+<input type="text" id="nombre"><br><br>
+
+<label>Apellido paterno:</label>
+<input type="text" id="paterno"><br><br>
+
+<label>Apellido materno:</label>
+<input type="text" id="materno"><br><br>
+
+<label>Fecha de nacimiento (YYYY-MM-DD):</label>
+<input type="date" id="fecha"><br><br>
+
+<button onclick="generarRFC()">Generar RFC</button>
+
+<p>RFC: <label id="resultadoRFC"></label></p>
+<script>
+function generarRFC() {
+    var nombre = document.getElementById("nombre").value.toUpperCase();
+    var paterno = document.getElementById("paterno").value.toUpperCase();
+    var materno = document.getElementById("materno").value.toUpperCase();
+    var fecha = document.getElementById("fecha").value;
+
+    var anio = fecha.substring(2,4);
+    var mes = fecha.substring(5,7);
+    var dia = fecha.substring(8,10);
+
+    var rfc = paterno[0] + paterno[1] + materno[0] + nombre[0] + anio + mes + dia;
+
+    var objeto = {
+        nombre: nombre,
+        paterno: paterno,
+        materno: materno,
+        fecha: fecha,
+        rfc: rfc
+    };
+
+    console.log(objeto);
+
+    document.getElementById("resultadoRFC").innerText = rfc;
+}
+</script>
+</body>
+</html>

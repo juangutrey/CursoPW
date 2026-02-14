@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Suma</title>
+</head>
+<body>
+
+<h2>Suma de dos numeros</h2>
+
+<input type="number" id="n1">
+<input type="number" id="n2">
+
+<button onclick="sumar()">Sumar</button>
+
+<p>Resultado: <label id="resultado"></label></p>
+
+<script>
+function sumar() {
+    var n1 = document.getElementById("n1").value;
+    var n2 = document.getElementById("n2").value;
+
+    var suma = Number(n1) + Number(n2);
+
+    document.getElementById("resultado").innerText = suma;
+}
+</script>
+
+</body>
+</html>
